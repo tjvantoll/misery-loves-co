@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Bonbon&family=Creepster&family=Poppins&display=swap");
+
+html {
+  box-sizing: border-box;
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p,
+li {
+  font-family: "Poppins", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header {
+  background: rgb(247, 86, 192);
+  background: linear-gradient(180deg, rgba(247, 86, 192, 1) 0%, rgba(129, 0, 0, 1) 51%, rgba(111, 0, 0, 1) 100%);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem;
+  font-family: "Bonbon", cursive;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+}
+form input {
+  width: 90%; /* This is a hack 🙃 */
+  margin: 2rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.card {
+  width: 300px;
+  height: 300px;
+  padding: 30px;
+  text-align: center;
+}
+.card p {
+  display: inline-block;
+  padding: 0.5rem;
+}
+.card img {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #000;
+}
+
+.horror-mode {
+  transition: all 3s ease;
+  background-color: #000;
+}
+.horror-mode * {
+  transition: all 3s ease;
+}
+
+.horror-mode .header {
+  background: rgb(29, 0, 0);
+  background: radial-gradient(circle, rgba(29, 0, 0, 1) 0%, rgba(68, 0, 0, 1) 52%, rgba(0, 0, 0, 1) 100%);
+}
+
+.horror-mode h1 {
+  color: red;
+  font-family: "Creepster", cursive;
+}
+
+.horror-mode p {
+  color: red;
+  font-family: "Creepster", cursive;
 }
