@@ -110,6 +110,7 @@ function App() {
               <span style={{ display: showFlowers ? 'inline' : 'none' }}>🌷🌻</span>
               <span style={{ display: showFlowers ? 'none' : 'inline' }}>🔪🩸</span>
             </span>
+            <img alt="Misery loves co logo" src="/logo.png" />
           </h1>
         </header>
         <form>
