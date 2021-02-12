@@ -1,5 +1,8 @@
 import React from 'react';
 import './App.css';
+import '@progress/kendo-theme-default/dist/all.css';
+
+import { Dialog, DialogActionsBar } from '@progress/kendo-react-dialogs';
 
 function App() {
   const [allArrangements, setAllArrangements] = React.useState([]);
@@ -14,6 +17,7 @@ function App() {
   const [horrorMode, setHorrorMode] = React.useState(false);
   const [myersMode, setMyersMode] = React.useState(false);
 
+  const [isDialogShowing, setDialogShowing] = React.useState(false);
   const [isDisabled, setDisabled] = React.useState(false);
 
   React.useEffect(() => {
@@ -99,6 +103,10 @@ function App() {
     setItems([...newArrangements]);
   }
 
+  const showDialog = () => {
+    setDialogShowing(true);
+  }
+
   return (
     <>
       <div className={myersMode ? 'myers-mode' : ''}>
@@ -119,7 +127,7 @@ function App() {
         </form>
         <div className="card-list">
           {items.map(item => (
-            <div key={item.id} className="card">
+            <div key={item.id} className="card" onClick={showDialog}>
               <p>{item.name}</p>
               <img src={item.url} alt={item.name} />
             </div>
@@ -130,6 +138,10 @@ function App() {
         <img className="myers" alt="Michael Myers says hi" src="/myers.png" />
       </div>
       </div>
+      {isDialogShowing && <Dialog title="Shopping Cart" onClose={() => { setDialogShowing(false); }}>
+        <p>Congrats! You’ve earned a free meat hook with your purchase. Great for kids!</p>
+        <img className="meat-hook" alt="A meat hook!" src="/hook.png" />
+      </Dialog>}
     </>
   );
 }

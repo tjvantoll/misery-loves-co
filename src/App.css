@@ -41,6 +41,11 @@ li {
   float: right;
 }
 
+.k-dialog-content img {
+  display: block;
+  margin: 0 auto;
+}
+
 form {
 }
 form input {
@@ -70,6 +75,9 @@ form input {
   height: 100%;
   width: 100%;
   border: 1px solid #000;
+}
+.card img {
+  cursor: pointer;
 }
 
 .horror-mode, .myers-mode {
