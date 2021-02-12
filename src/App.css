@@ -88,3 +88,28 @@ form input {
   color: red;
   font-family: "Creepster", cursive;
 }
+
+.myers {
+  position: absolute;
+  transition: all 2s ease 0s;
+  transform: rotate(-20deg);
+  bottom: -550px;
+  right: -500px;
+}
+.myers-mode .myers {
+  bottom: -100px;
+  right: -75px;
+}
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
