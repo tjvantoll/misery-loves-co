@@ -41,6 +41,9 @@ li {
   float: right;
 }
 
+.k-dialog-titlebar {
+  background: rgba(111, 0, 0, 1) 100%;
+}
 .k-dialog-content img {
   display: block;
   margin: 0 auto;

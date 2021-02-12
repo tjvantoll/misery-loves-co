@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import '@progress/kendo-theme-default/dist/all.css';
 
-import { Dialog, DialogActionsBar } from '@progress/kendo-react-dialogs';
+import { Dialog } from '@progress/kendo-react-dialogs';
 
 function App() {
   const [allArrangements, setAllArrangements] = React.useState([]);
